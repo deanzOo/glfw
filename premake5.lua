@@ -3,7 +3,7 @@ project "GLFW"
 	language "C"
 
 	targetdir ("bin/" .. output_dir .. "/%{prj.name}")
-	objdir ("bin-int/" .. output_dir .. "/%{prj.name}")
+	objdir ("int/" .. output_dir .. "/%{prj.name}")
 
 	files
 	{
