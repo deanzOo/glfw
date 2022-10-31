@@ -62,4 +62,5 @@ project "GLFW"
 
 	filter "configurations:Release"
 		runtime "Release"
+		buildoptions "/MT"
 		optimize "on"
