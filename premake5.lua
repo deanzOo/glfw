@@ -1,10 +1,10 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "On"
+	staticruntime "on"
 
-	targetdir ("bin/" .. output_dir .. "/%{prj.name}")
-	objdir ("int/" .. output_dir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. output_dir .. "/%{prj.name}")
+	objdir ("%{wks.location}/int/" .. output_dir .. "/%{prj.name}")
 
 	files
 	{
@@ -32,7 +32,6 @@ project "GLFW"
 	}
 	
 	filter "system:windows"
-		systemversion "latest"
 
 		files
 		{
@@ -50,8 +49,7 @@ project "GLFW"
 			"src/osmesa_context.c"
 		}
 
-		defines 
-		{ 
+		defines { 
 			"_GLFW_WIN32",
 			"_CRT_SECURE_NO_WARNINGS"
 		}
